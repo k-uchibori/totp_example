@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+        <title>Setup MFA</title>
+	</head>
+	<body>
+        <h1>２段階認証の設定</h1>
+		
+        <p>以下のQRコードをAuthenticatorアプリで読み取ってください</p>
+        
+		<img th:src="@{/qrCode}" alt="QR Code for MFA Setup" />
+        <p>スキャン後、アプリに表示される6桁のコードを入力して設定を完了してください。</p>
+        <form action="/mfa" method="post">
+			<input type="text" name="code" required>
+            <div>
+                <button type="submit">登録完了</button>
+            </div>
+        </form>
+	</body>
+
+</html>

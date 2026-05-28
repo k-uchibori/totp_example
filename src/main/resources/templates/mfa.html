@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MFA</title>
+</head>
+<body>
+	<h1>Multi-Factor Authentication</h1>
+    <form action="/mfa" method="post">
+        <div>
+            <label for="code">認証コード（６桁）:</label>
+            <input type="text" id="code" name="code" required>
+        </div>
+        <div>
+            <button type="submit">確認</button>
+        </div>
+    </form>
+
+</body>
+</html>
